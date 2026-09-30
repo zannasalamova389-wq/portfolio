@@ -54,10 +54,17 @@ ul li {
 .card {
     background-color: #fff;
     border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
     padding: 20px;
-    flex: 1;
-    min-width: 250px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 .card h3 {
     color: #4a2c1a;
