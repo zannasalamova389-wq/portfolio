@@ -2,77 +2,143 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale-1.0">
-    <title>Жанна - Frontend-разработчик</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Жанна — Frontend-разработчик</title>
+    
+    <!-- Подключение шрифтов -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Наши стили -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header> 
-    <h1>Жанна</h1>
-    <p>Начинающий frontend-разработчик</p>
-</header>
-<main>
-    <section id="about">
-    <h2>Обо мне</h2>
-<p>Меня зовут Жанна. Я изучаю веб-разработку: HTML,CSS, JavaScript,  Python. Ищу удаленную работу или проекты на фрилансе.</p>
-</section>
-<section id="skills">
-    <h2>Навыки</h2>
-    <ul>
-<li>HTML5 - структура сайтов</li>
-<li>CSS3 - оформление, адаптивная вёрстка</li>
-<li>JavaScript - интерактивность</li>
-<li>Python - основы программирования</li>
-<li>Git и GitHub - сохранение и публикация кода</li>
-</ul>
-</section>
-<section id="projects">
-    <h2>Мои проекты</h2>
-    <div class="cards">
-    <div class="card">
-    <img src="images/coffee.png" alt="Coffee Time">
-    <h3>Coffee Time - интернет-магазин кофейни</h3>
-    <p>HTML5, CSS3, JavaScript. Адаптивная вёрстка, меню, корзина с кнопками +/-, счётчик товара.</p>
-    <a href="https://zannasalamova389-wq.github.io/coffee-site/" target="_blank">Посмотреть сайт</a>
-</div>
-<div class="card">
-    <img src="images/react.png" alt="React-проект">
-    <h3>React-проект - карточки кофе</h3>
-    <p>React.Vite,, CSS, Компоненты, props, повторное использование кода.</p>
-    <a href="https://github.com/zannasalamova389-wq" target="_blank">Код на GitHub</a>
-</div>
-<div class="card">
-<img src="images/portfolio.png" alt="Портфолио">
-<h3>Портфолио - личный сайт</h3>
-<p>HTML5, CSS3. Личный сайт с описанием навыков и проектов.</p>
-<a href="https://github.com/zannasalamova389-wq" target="_blank">Посмотреть сайт</a>
-        <div class="card">
-            <img src="images/gallery-preview.png " alt="Галерея рисунков">
-            <h3>Галерея рисунков — JavaScript</h3>
-            <p>HTML5, CSS3, JavaScript. Интерактивная галерея из 31 рисунка с модальным окном для просмотра.</p>
-            <a href="https://zannasalamova389-wq.github.io/art-gallery-simple/" target="_blank">Посмотреть сайт</a>
+
+    <!-- ============================================ -->
+    <!-- ШАПКА -->
+    <!-- ============================================ -->
+    <header class="header">
+        <h1>Жанна</h1>
+        <p>Начинающий frontend-разработчик</p>
+    </header>
+
+    <!-- ============================================ -->
+    <!-- ОСНОВНОЙ КОНТЕНТ -->
+    <!-- ============================================ -->
+    <main>
+
+        <!-- ОБО МНЕ -->
+        <section id="about">
+            <h2>Обо мне</h2>
+            <p>Меня зовут Жанна. Я изучаю веб-разработку: HTML, CSS, JavaScript, Python. Ищу удалённую работу или проекты на фрилансе.</p>
+        </section>
+
+        <!-- НАВЫКИ -->
+        <section id="skills">
+            <h2>Навыки</h2>
+            <ul>
+                <li>HTML5 — структура сайтов</li>
+                <li>CSS3 — оформление, адаптивная вёрстка</li>
+                <li>JavaScript — интерактивность</li>
+                <li>Python — основы программирования</li>
+                <li>Git и GitHub — сохранение и публикация кода</li>
+                <li>Figma — работа с макетами</li>
+                <li>Шитьё и рукоделие — создание игрушек и декора</li>
+            </ul>
+        </section>
+
+        <!-- МОИ ПРОЕКТЫ -->
+        <section id="projects">
+            <h2>Мои проекты</h2>
             <div class="cards">
-    <!-- 👇 ВАША НОВАЯ КАРТОЧКА 👇 -->
-    <div class="card">
-        <img src="images/cosmetics-preview.png" alt="Pink Cosmetics">
-        <h3>Pink Cosmetics — лендинг</h3>
-        <p>HTML5, CSS3, анимации. Свёрстан по макету из Figma.</p>
-        <a href="https://zannasalamova389-wq.github.io/cosmetics-landing-page/" target="_blank">Посмотреть сайт</a>
-    </div>
-</div>
-</div>
-</div>
-</section>
-<section id="contacts">
-    <h2>Контанты</h2>
-    <p>GitHub: ,<a href="https://github.com/zannasalamova389-wq" target="_blank">zannasalamova389-wq</a></p>
-    <p>Email: (добавлю позже)</p>
-    <p>Telegram: (добавлю позже)</p>
-</section>
-</main>
-<foote>
-    <p>© 2026 Жанна. Все права защищены.</p>
-</footer>
-<script src="script.js"></script>
+
+                <!-- Coffee Time -->
+                <div class="card">
+                    <img src="images/coffee.png" alt="Coffee Time">
+                    <h3>Coffee Time — интернет-магазин кофейни</h3>
+                    <p>HTML5, CSS3, JavaScript. Адаптивная вёрстка, меню, корзина с кнопками +/-, счётчик товара.</p>
+                    <a href="https://zannasalamova389-wq.github.io/coffee-site/" target="_blank">Посмотреть сайт</a>
+                </div>
+
+                <!-- React-проект -->
+                <div class="card">
+                    <img src="images/react.png" alt="React-проект">
+                    <h3>React-проект — карточки кофе</h3>
+                    <p>React, Vite, CSS, Компоненты, props, повторное использование кода.</p>
+                    <a href="https://github.com/zannasalamova389-wq" target="_blank">Код на GitHub</a>
+                </div>
+
+                <!-- Портфолио -->
+                <div class="card">
+                    <img src="images/portfolio.png" alt="Портфолио">
+                    <h3>Портфолио — личный сайт</h3>
+                    <p>HTML5, CSS3. Личный сайт с описанием навыков и проектов.</p>
+                    <a href="https://github.com/zannasalamova389-wq" target="_blank">Посмотреть сайт</a>
+                </div>
+
+                <!-- Галерея рисунков -->
+                <div class="card">
+                    <img src="images/gallery-preview.png" alt="Галерея рисунков">
+                    <h3>Галерея рисунков — JavaScript</h3>
+                    <p>HTML5, CSS3, JavaScript. Интерактивная галерея из 31 рисунка с модальным окном для просмотра.</p>
+                    <a href="https://zannasalamova389-wq.github.io/art-gallery-simple/" target="_blank">Посмотреть сайт</a>
+                </div>
+
+                <!-- Pink Cosmetics -->
+                <div class="card">
+                    <img src="images/cosmetics-preview.png" alt="Pink Cosmetics">
+                    <h3>Pink Cosmetics — лендинг</h3>
+                    <p>HTML5, CSS3, анимации. Свёрстан по макету из Figma.</p>
+                    <a href="https://zannasalamova389-wq.github.io/cosmetics-landing-page/" target="_blank">Посмотреть сайт</a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- МОИ РАБОТЫ (HANDMADE) -->
+        <!-- ============================================ -->
+        <section class="handmade" id="handmade">
+            <h2>Мои работы (Handmade)</h2>
+            <p class="handmade-subtitle">Примеры моих рукодельных работ. Могу сделать похожие на заказ.</p>
+            
+            <div class="handmade-grid">
+                
+                <!-- Когсворт -->
+                <div class="handmade-card">
+                    <img src="images/cogsworth.png" alt="Когсворт — часы из картона и ваты">
+                    <h3>Когсворт (часы)</h3>
+                    <p>Материалы: картон, вата, часовой механизм</p>
+                </div>
+
+                <!-- Микки Маус -->
+                <div class="handmade-card">
+                    <img src="images/mickey.png" alt="Микки Маус — игрушка">
+                    <h3>Микки Маус</h3>
+                    <p>Материалы: картон, вата</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- КОНТАКТЫ -->
+        <!-- ============================================ -->
+        <section id="contacts">
+            <h2>Контакты</h2>
+            <p>GitHub: <a href="https://github.com/zannasalamova389-wq" target="_blank">zannasalamova389-wq</a></p>
+            <p>Email: (добавлю позже)</p>
+            <p>Telegram: (добавлю позже)</p>
+        </section>
+
+    </main>
+
+    <!-- ============================================ -->
+    <!-- ПОДВАЛ -->
+    <!-- ============================================ -->
+    <footer>
+        <p>© 2026 Жанна. Все права защищены.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,56 +1,87 @@
+/* ============================================
+   БАЗОВЫЕ СТИЛИ (СБРОС)
+   ============================================ */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', sans-serif;
     background-color: #fdf6e3;
     color: #333;
     line-height: 1.6;
 }
+
+/* ============================================
+   ШАПКА САЙТА
+   ============================================ */
 header {
     text-align: center;
     padding: 60px 20px;
     background-color: #4a2c1a;
     color: #fff;
 }
+
 header h1 {
     font-size: 36px;
     margin-bottom: 10px;
+    font-family: 'Playfair Display', serif;
 }
+
 header p {
     font-size: 18px;
-    cursor: #d4a373;
+    color: #d4a373;
 }
+
+/* ============================================
+   СЕКЦИИ (общие стили)
+   ============================================ */
 section {
     padding: 50px 40px;
-    min-width: 900px;
+    max-width: 900px;
     margin: 0 auto;
 }
+
 section h2 {
+    font-family: 'Playfair Display', serif;
     font-size: 28px;
     color: #4a2c1a;
     margin-bottom: 20px;
     border-bottom: 2px solid #d4a373;
     padding-bottom: 10px;
 }
+
+/* ============================================
+   НАВЫКИ (список)
+   ============================================ */
 ul {
     list-style: none;
     padding-left: 0;
 }
+
 ul li {
     background-color: #fff;
     padding: 12px 20px;
     margin-bottom: 10px;
     border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
+
+/* ============================================
+   КАРТОЧКИ ПРОЕКТОВ
+   ============================================ */
 .cards {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
 }
+
 .card {
     background-color: #fff;
     border-radius: 12px;
@@ -60,31 +91,147 @@ ul li {
     flex-direction: column;
     padding: 20px;
     transition: transform 0.3s, box-shadow 0.3s;
+    flex: 1;
+    min-width: 280px;
 }
 
 .card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    background-color: #f5f5f5;
+}
+
 .card h3 {
     color: #4a2c1a;
     margin-bottom: 10px;
+    font-size: 18px;
 }
+
+.card p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
 .card a {
     display: inline-block;
-    margin-top: 10px;
+    margin-top: auto;
     color: #d4a373;
-text-decoration: none;
-font-weight: bold;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
 }
-.card a :hover {
+
+.card a:hover {
     color: #b8864a;
 }
+
+/* ============================================
+   СЕКЦИЯ "HANDMADE"
+   ============================================ */
+.handmade {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+
+.handmade h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 700;
+    color: #D4A373;
+    text-align: center;
+    margin-bottom: 15px;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.handmade-subtitle {
+    text-align: center;
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 50px;
+}
+
+.handmade-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.handmade-card {
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.handmade-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(212, 163, 115, 0.3);
+}
+
+.handmade-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    background-color: #f5f5f5;
+}
+
+.handmade-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.handmade-card p {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.handmade-card .price {
+    font-size: 18px;
+    font-weight: 700;
+    color: #D4A373;
+    margin-top: auto;
+}
+
+/* ============================================
+   КОНТАКТЫ
+   ============================================ */
 #contacts a {
     color: #d4a373;
     text-decoration: none;
     font-weight: bold;
 }
+
+#contacts a:hover {
+    color: #b8864a;
+}
+
+/* ============================================
+   ПОДВАЛ
+   ============================================ */
 footer {
     text-align: center;
     padding: 20px;
@@ -93,14 +240,28 @@ footer {
     font-size: 14px;
     margin-top: 40px;
 }
-@media (max-width 768px) {
+
+/* ============================================
+   АДАПТИВНОСТЬ (для телефонов)
+   ============================================ */
+@media (max-width: 768px) {
     header h1 {
         font-size: 28px;
     }
-section {
-    padding: 30px 20px;
-}
-.cards{
-    flex-direction: column;
-}
+
+    section {
+        padding: 30px 20px;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .handmade h2 {
+        font-size: 32px;
+    }
+
+    .handmade-grid {
+        grid-template-columns: 1fr;
+    }
 }
