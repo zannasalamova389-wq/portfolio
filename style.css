@@ -21,65 +21,98 @@ body {
 /* ============================================
    ШАПКА САЙТА
    ============================================ */
-header {
+.header {
     text-align: center;
-    padding: 60px 20px;
+    padding: 60px 20px 40px;
     background-color: #4a2c1a;
     color: #fff;
 }
 
-header h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
+.header h1 {
     font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 10px;
 }
 
-header p {
+.header p {
     font-size: 18px;
+    color: #d4a373;
+    margin-bottom: 25px;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
     color: #d4a373;
 }
 
 /* ============================================
-   СЕКЦИИ (общие стили)
+   СЕКЦИИ (общие)
    ============================================ */
 section {
-    padding: 50px 40px;
-    max-width: 900px;
+    padding: 60px 40px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
 section h2 {
     font-family: 'Playfair Display', serif;
-    font-size: 28px;
+    font-size: 32px;
     color: #4a2c1a;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     border-bottom: 2px solid #d4a373;
     padding-bottom: 10px;
 }
 
 /* ============================================
+   ОБО МНЕ
+   ============================================ */
+#about p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.7;
+    max-width: 800px;
+}
+
+/* ============================================
    НАВЫКИ (список)
    ============================================ */
-ul {
+#skills ul {
     list-style: none;
     padding-left: 0;
 }
 
-ul li {
+#skills ul li {
     background-color: #fff;
-    padding: 12px 20px;
-    margin-bottom: 10px;
+    padding: 14px 22px;
+    margin-bottom: 12px;
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    font-size: 16px;
+    color: #333;
 }
 
 /* ============================================
    КАРТОЧКИ ПРОЕКТОВ
    ============================================ */
 .cards {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
 }
 
 .card {
@@ -91,13 +124,11 @@ ul li {
     flex-direction: column;
     padding: 20px;
     transition: transform 0.3s, box-shadow 0.3s;
-    flex: 1;
-    min-width: 280px;
 }
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
 }
 
 .card img {
@@ -110,9 +141,10 @@ ul li {
 }
 
 .card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
     color: #4a2c1a;
     margin-bottom: 10px;
-    font-size: 18px;
 }
 
 .card p {
@@ -128,8 +160,9 @@ ul li {
     margin-top: auto;
     color: #d4a373;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
     font-size: 15px;
+    transition: color 0.3s;
 }
 
 .card a:hover {
@@ -141,26 +174,24 @@ ul li {
    ============================================ */
 .handmade {
     max-width: 1200px;
-    margin: 80px auto;
-    padding: 0 20px;
+    margin: 0 auto;
+    padding: 60px 40px;
 }
 
 .handmade h2 {
     font-family: 'Playfair Display', serif;
-    font-size: 42px;
-    font-weight: 700;
-    color: #D4A373;
-    text-align: center;
+    font-size: 32px;
+    color: #4a2c1a;
     margin-bottom: 15px;
-    border-bottom: none;
-    padding-bottom: 0;
+    border-bottom: 2px solid #d4a373;
+    padding-bottom: 10px;
 }
 
 .handmade-subtitle {
     text-align: center;
     font-size: 16px;
     color: #777;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 
 .handmade-grid {
@@ -219,14 +250,22 @@ ul li {
 /* ============================================
    КОНТАКТЫ
    ============================================ */
+#contacts p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 12px;
+}
+
 #contacts a {
     color: #d4a373;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
+    transition: color 0.3s;
 }
 
 #contacts a:hover {
     color: #b8864a;
+    text-decoration: underline;
 }
 
 /* ============================================
@@ -234,34 +273,52 @@ ul li {
    ============================================ */
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 30px;
     background-color: #4a2c1a;
     color: #fff;
     font-size: 14px;
-    margin-top: 40px;
+    margin-top: 60px;
 }
 
 /* ============================================
    АДАПТИВНОСТЬ (для телефонов)
    ============================================ */
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 28px;
-    }
-
-    section {
-        padding: 30px 20px;
-    }
-
-    .cards {
-        flex-direction: column;
-    }
-
-    .handmade h2 {
+    .header h1 {
         font-size: 32px;
     }
 
+    .header p {
+        font-size: 16px;
+    }
+
+    .nav {
+        gap: 15px;
+    }
+
+    .nav a {
+        font-size: 14px;
+    }
+
+    section {
+        padding: 40px 20px;
+    }
+
+    section h2 {
+        font-size: 26px;
+    }
+
+    .cards,
     .handmade-grid {
         grid-template-columns: 1fr;
+    }
+
+    .card img,
+    .handmade-card img {
+        height: 200px;
+    }
+
+    .handmade-subtitle {
+        font-size: 14px;
     }
 }
