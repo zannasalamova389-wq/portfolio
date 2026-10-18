@@ -1,206 +1,238 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Жанна — Frontend-разработчик</title>
-    
-    <!-- Подключение шрифтов -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Наши стили -->
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Портфолио — Жанна Шаламова</title>
+<style>
+  /* Встроенные стили для красивого портфолио */
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+  }
+
+  /* Шапка */
+  .header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  }
+  .header h1 { font-size: 36px; margin-bottom: 10px; }
+  .header p { font-size: 18px; opacity: 0.9; }
+
+  .container {
+    max-width: 1000px;
+    margin: -30px auto 40px;
+    padding: 0 20px;
+    position: relative;
+  }
+
+  /* Кнопка На главную */
+  .back-btn {
+    display: inline-block;
+    background: #fff;
+    color: #764ba2;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    transition: 0.3s;
+  }
+  .back-btn:hover { background: #764ba2; color: #fff; }
+
+  /* Заголовки разделов */
+  .section-title {
+    font-size: 24px;
+    color: #4a148c;
+    margin: 40px 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* Сетка карточек */
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+  }
+
+  /* Карточка */
+  .card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 25px;
+    text-decoration: none;
+    color: #333;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(118, 75, 162, 0.2);
+    border-color: #764ba2;
+  }
+  .card-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+  }
+  .card h3 {
+    font-size: 18px;
+    color: #4a148c;
+    margin-bottom: 10px;
+  }
+  .card p {
+    font-size: 14px;
+    color: #666;
+  }
+
+  /* Блоки с текстом (О себе, Навыки) */
+  .text-block {
+    background: #fff;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-left: 5px solid #667eea;
+  }
+  .text-block p { margin-bottom: 10px; }
+  .text-block ul { list-style: none; }
+  .text-block li { margin-bottom: 8px; font-size: 16px; }
+
+  /* Контакты */
+  .vk-btn {
+    display: inline-block;
+    background: #0077FF;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: 0 4px 15px rgba(0, 119, 255, 0.4);
+    transition: 0.3s;
+  }
+  .vk-btn:hover { background: #005bb5; transform: scale(1.05); }
+
+  /* Подвал */
+  .footer {
+    text-align: center;
+    padding: 30px;
+    color: #888;
+    font-size: 14px;
+  }
+</style>
 </head>
 <body>
 
-    <!-- ============================================ -->
-    <!-- ШАПКА -->
-    <!-- ============================================ -->
-    <header class="header">
-        <h1>Жанна</h1>
-        <p>Начинающий frontend-разработчик</p>
-        <nav class="nav">
-            <a href="#about">Обо мне</a>
-            <a href="#skills">Навыки</a>
-            <a href="#projects">Проекты</a>
-            <a href="#handmade">Рукоделие</a>
-            <a href="https://zannasalamova389-wq.github.io/resume-site/" target="_blank">Резюме</a>
-            <a href="#contacts">Контакты</a>
-        </nav>
-    </header>
+<header class="header">
+  <h1>💼 Портфолио</h1>
+  <p>Жанна Шаламова — младший воспитатель</p>
+</header>
 
-    <!-- ============================================ -->
-    <!-- ОСНОВНОЙ КОНТЕНТ -->
-    <!-- ============================================ -->
-    <main>
+<main class="container">
 
-        <!-- ОБО МНЕ -->
-        <section id="about">
-            <h2>Обо мне</h2>
-            <p>Меня зовут Жанна. Я изучаю веб-разработку: HTML, CSS, JavaScript, Python. Ищу удалённую работу или проекты на фрилансе.</p>
-        </section>
+  <a href="index.html" class="back-btn">← На главную</a>
 
-        <!-- НАВЫКИ -->
-        <section id="skills">
-            <h2>Навыки</h2>
-            <ul>
-                <li>HTML5 — структура сайтов</li>
-                <li>CSS3 — оформление, адаптивная вёрстка</li>
-                <li>JavaScript — интерактивность</li>
-                <li>Python — основы программирования</li>
-                <li>Git и GitHub — сохранение и публикация кода</li>
-                <li>Figma — работа с макетами</li>
-                <li>Шитьё и рукоделие — создание игрушек и декора</li>
-            </ul>
-        </section>
+  <!-- ГЛАВНЫЙ ПРОЕКТ -->
+  <h2 class="section-title">🌐 Главный проект</h2>
+  <div class="cards-grid">
+    <a href="https://zannasalamova389-wq.github.io/mir-zhanny/" class="card" target="_blank">
+      <div class="card-icon">🌟</div>
+      <h3>Сайт «Мир Жанны»</h3>
+      <p>Все игры, стихи, рисунки и методички в одном месте</p>
+    </a>
+  </div>
 
-        <!-- МОИ ПРОЕКТЫ -->
-        <section id="projects">
-            <h2>Мои проекты</h2>
-            <div class="cards">
+  <!-- МОИ КНИГИ -->
+  <h2 class="section-title">📚 Мои книги</h2>
+  <div class="cards-grid">
+    <a href="https://zannasalamova389-wq.github.io/book-zhanny/" class="card" target="_blank">
+      <div class="card-icon">📖</div>
+      <h3>Книга стихов</h3>
+      <p>20 стихов для детей и взрослых</p>
+    </a>
+    <a href="https://zannasalamova389-wq.github.io/book-derevnya/" class="card" target="_blank">
+      <div class="card-icon">🌿</div>
+      <h3>Деревенское детство</h3>
+      <p>Книга воспоминаний (14 глав)</p>
+    </a>
+  </div>
 
-                <!-- Coffee Time -->
-                <div class="card">
-                    <img src="images/coffee.png" alt="Coffee Time">
-                    <h3>Coffee Time — интернет-магазин кофейни</h3>
-                    <p>HTML5, CSS3, JavaScript. Адаптивная вёрстка, меню, корзина с кнопками +/-, счётчик товара.</p>
-                    <a href="https://zannasalamova389-wq.github.io/coffee-site/" target="_blank">Посмотреть сайт</a>
-                </div>
+  <!-- МОИ ИГРЫ -->
+  <h2 class="section-title">🎮 Мои игры</h2>
+  <div class="cards-grid">
+    <a href="https://zannasalamova389-wq.github.io/coloring-game/" class="card" target="_blank">
+      <div class="card-icon">🎨</div>
+      <h3>Раскраска</h3>
+      <p>Развивающая игра для детей</p>
+    </a>
+    <a href="https://zannasalamova389-wq.github.io/memory-game/" class="card" target="_blank">
+      <div class="card-icon">🎴</div>
+      <h3>Найди пару</h3>
+      <p>Игра на память с рисунками</p>
+    </a>
+    <a href="https://zannasalamova389-wq.github.io/where-live-game/" class="card" target="_blank">
+      <div class="card-icon">🏠</div>
+      <h3>Кто где живёт</h3>
+      <p>Угадай домик животного</p>
+    </a>
+    <a href="https://zannasalamova389-wq.github.io/puzzle-game/" class="card" target="_blank">
+      <div class="card-icon">🧩</div>
+      <h3>Пазл</h3>
+      <p>Собери картинку из частей</p>
+    </a>
+  </div>
 
-                <!-- React-проект -->
-                <div class="card">
-                    <img src="images/react.png" alt="React-проект">
-                    <h3>React-проект — карточки кофе</h3>
-                    <p>React, Vite, CSS, Компоненты, props, повторное использование кода.</p>
-                    <a href="https://github.com/zannasalamova389-wq" target="_blank">Код на GitHub</a>
-                </div>
+  <!-- О СЕБЕ -->
+  <h2 class="section-title">👩 О себе</h2>
+  <div class="text-block">
+    <p><strong>Имя:</strong> Жанна Шаламова</p>
+    <p><strong>Образование:</strong> АНО ДО УЦ «Стандарт», 2016 год. Специальность — младший воспитатель.</p>
+    <p><strong>Опыт:</strong> работа с детьми (свои дети и няня для чужих детей).</p>
+    <p><strong>Миссия:</strong> создавать развивающие и обучающие материалы для детей, чтобы они учились через игру и творчество.</p>
+    <p><strong>Главный принцип:</strong> всё, что вы видите в моих проектах — рисунки, игры, стихи — создано мной лично.</p>
+  </div>
 
-                <!-- Портфолио -->
-                <div class="card">
-                    <img src="images/portfolio.png" alt="Портфолио">
-                    <h3>Портфолио — личный сайт</h3>
-                    <p>HTML5, CSS3. Личный сайт с описанием навыков и проектов.</p>
-                    <a href="https://github.com/zannasalamova389-wq" target="_blank">Посмотреть сайт</a>
-                </div>
+  <!-- НАВЫКИ -->
+  <h2 class="section-title">🛠 Мои навыки</h2>
+  <div class="text-block">
+    <ul>
+      <li>🎨 Рисование (создание иллюстраций для книг и игр).</li>
+      <li>📝 Написание стихов и прозы для детей.</li>
+      <li>💻 Создание сайтов (HTML, CSS, JavaScript).</li>
+      <li>🎮 Разработка детских развивающих игр.</li>
+      <li>📚 Методическая работа (конспекты, планы занятий).</li>
+    </ul>
+  </div>
 
-                <!-- Галерея рисунков -->
-                <div class="card">
-                    <img src="images/gallery-preview.png" alt="Галерея рисунков">
-                    <h3>Галерея рисунков — JavaScript</h3>
-                    <p>HTML5, CSS3, JavaScript. Интерактивная галерея из 31 рисунка с модальным окном для просмотра.</p>
-                    <a href="https://zannasalamova389-wq.github.io/art-gallery-simple/" target="_blank">Посмотреть сайт</a>
-                </div>
+  <!-- КОНТАКТЫ -->
+  <h2 class="section-title">📞 Контакты</h2>
+  <div style="text-align: center; margin-bottom: 40px;">
+    <a href="https://vk.ru/club242067674" target="_blank" class="vk-btn">
+      💬 Группа ВКонтакте «Игры для детей от Жанна»
+    </a>
+  </div>
 
-                <!-- Pink Cosmetics -->
-                <div class="card">
-                    <img src="images/cosmetics-preview.png" alt="Pink Cosmetics">
-                    <h3>Pink Cosmetics — лендинг</h3>
-                    <p>HTML5, CSS3, анимации. Свёрстан по макету из Figma.</p>
-                    <a href="https://zannasalamova389-wq.github.io/cosmetics-landing-page/" target="_blank">Посмотреть сайт</a>
-                </div>
+</main>
 
-                <!-- Photographer Site -->
-                <div class="card">
-                    <img src="images/photographer-preview.png" alt="Photographer Site">
-                    <h3>Photographer Site — сайт-визитка</h3>
-                    <p>HTML5, CSS3, JavaScript. Портфолио с модальным окном и QR-кодом.</p>
-                    <a href="https://zannasalamova389-wq.github.io/photographer-site/" target="_blank">Посмотреть сайт</a>
-                </div>
+<footer class="footer">
+  <p>© 2026 Жанна Шаламова. Авторский проект.</p>
+</footer>
 
-                <!-- Ясный Взгляд -->
-                <div class="card">
-                    <img src="images/yasny-vzglyad-preview.png" alt="Ясный Взгляд">
-                    <h3>Ясный Взгляд — сайт гадалки</h3>
-                    <p>HTML5, CSS3. Сайт-визитка с услугами, ценами и QR-кодом.</p>
-                    <a href="https://zannasalamova389-wq.github.io/yasny-vzglyad/" target="_blank">Посмотреть сайт</a>
-                </div>
-
-                <!-- Резюме -->
-                <div class="card">
-                    <img src="images/resume-preview.png" alt="Резюме">
-                    <h3>Резюме — сайт-визитка</h3>
-                    <p>HTML5, CSS3. Резюме с описанием опыта, образования и навыков.</p>
-                    <a href="https://zannasalamova389-wq.github.io/resume-site/" target="_blank">Посмотреть сайт</a>
-                </div>
-
-                <!-- Найди пару -->
-                <div class="card">
-                    <img src="images/memory-game-preview.png" alt="Найди пару">
-                    <h3>Найди пару — игра для детей</h3>
-                    <p>HTML5, CSS3, JavaScript. Игра на память с рисунками и звуками. 3 уровня сложности.</p>
-                    <a href="https://zannasalamova389-wq.github.io/memory-game/" target="_blank">Играть</a>
-                </div>
-                <!-- Пазл -->
-<div class="card">
-    <img src="images/puzzle-game-preview.png" alt="Пазл">
-    <h3>Пазл — игра для детей</h3>
-    <p>HTML5, CSS3, JavaScript. Игра-пазл с уровнями сложности и звуками.</p>
-    <a href="https://zannasalamova389-wq.github.io/puzzle-game/" target="_blank">Играть</a>
-</div>
-<div class="card">
-    <img src="images/email-preview.png" alt="HTML-письмо">
-    <h3>HTML-письмо для email-рассылки</h3>
-    <p>HTML5, CSS3. Адаптивная вёрстка письма для рассылок.</p>
-    <a href="#">Посмотреть</a>
-</div>
-<!-- Кто где живёт -->
-<div class="card">
-    <img src="images/where-live-preview.png" alt="Кто где живёт">
-    <h3>Кто где живёт — игра для детей</h3>
-    <p>HTML5, CSS3, JavaScript. Игра на знание животных и мест обитания.</p>
-    <a href="https://zannasalamova389-wq.github.io/where-live-game/" target="_blank">Играть</a>
-</div>
-
-            </div>
-        </section>
-
-        <!-- ============================================ -->
-        <!-- МОИ РАБОТЫ (HANDMADE) -->
-        <!-- ============================================ -->
-        <section class="handmade" id="handmade">
-            <h2>Мои работы (Handmade)</h2>
-            <p class="handmade-subtitle">Примеры моих рукодельных работ. Могу сделать похожие на заказ.</p>
-            
-            <div class="handmade-grid">
-                
-                <!-- Когсворт -->
-                <div class="handmade-card">
-                    <img src="images/cogsworth.png" alt="Когсворт — часы из картона и ваты">
-                    <h3>Когсворт (часы)</h3>
-                    <p>Материалы: картон, вата, часовой механизм</p>
-                    <p class="price">Цена: от 3 500 ₽</p>
-                </div>
-
-                <!-- Микки Маус -->
-                <div class="handmade-card">
-                    <img src="images/mickey.png" alt="Микки Маус — игрушка">
-                    <h3>Микки Маус</h3>
-                    <p>Материалы: картон, вата, ткань</p>
-                    <p class="price">Цена: от 2 000 ₽</p>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- ============================================ -->
-        <!-- КОНТАКТЫ -->
-        <!-- ============================================ -->
-        <section id="contacts">
-            <h2>Контакты</h2>
-            <p>GitHub: <a href="https://github.com/zannasalamova389-wq" target="_blank">zannasalamova389-wq</a></p>
-            <p>Email: (добавлю позже)</p>
-            <p>Telegram: (добавлю позже)</p>
-        </section>
-
-    </main>
-
-    <!-- ============================================ -->
-    <!-- ПОДВАЛ -->
-    <!-- ============================================ -->
-    <footer>
-        <p>© 2026 Жанна. Все права защищены.</p>
-    </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
