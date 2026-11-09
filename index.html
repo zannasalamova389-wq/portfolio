@@ -1,147 +1,18 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Портфолио — Жанна Шаламова</title>
-<style>
-  /* Встроенные стили для красивого портфолио */
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f7f6;
-    color: #333;
-    line-height: 1.6;
-  }
-
-  /* Шапка */
-  .header {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    text-align: center;
-    padding: 50px 20px;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  }
-  .header h1 { font-size: 36px; margin-bottom: 10px; }
-  .header p { font-size: 18px; opacity: 0.9; }
-
-  .container {
-    max-width: 1000px;
-    margin: -30px auto 40px;
-    padding: 0 20px;
-    position: relative;
-  }
-
-  /* Кнопка На главную */
-  .back-btn {
-    display: inline-block;
-    background: #fff;
-    color: #764ba2;
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 25px;
-    font-weight: bold;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    margin-bottom: 30px;
-    transition: 0.3s;
-  }
-  .back-btn:hover { background: #764ba2; color: #fff; }
-
-  /* Заголовки разделов */
-  .section-title {
-    font-size: 24px;
-    color: #4a148c;
-    margin: 40px 0 20px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-
-  /* Сетка карточек */
-  .cards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 20px;
-  }
-
-  /* Карточка */
-  .card {
-    background: #fff;
-    border-radius: 16px;
-    padding: 25px;
-    text-decoration: none;
-    color: #333;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    transition: transform 0.3s, box-shadow 0.3s;
-    border: 1px solid #eee;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(118, 75, 162, 0.2);
-    border-color: #764ba2;
-  }
-  .card-icon {
-    font-size: 40px;
-    margin-bottom: 15px;
-  }
-  .card h3 {
-    font-size: 18px;
-    color: #4a148c;
-    margin-bottom: 10px;
-  }
-  .card p {
-    font-size: 14px;
-    color: #666;
-  }
-
-  /* Блоки с текстом (О себе, Навыки) */
-  .text-block {
-    background: #fff;
-    border-radius: 16px;
-    padding: 30px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    border-left: 5px solid #667eea;
-  }
-  .text-block p { margin-bottom: 10px; }
-  .text-block ul { list-style: none; }
-  .text-block li { margin-bottom: 8px; font-size: 16px; }
-
-  /* Контакты */
-  .vk-btn {
-    display: inline-block;
-    background: #0077FF;
-    color: #fff;
-    text-decoration: none;
-    padding: 15px 30px;
-    border-radius: 30px;
-    font-weight: bold;
-    font-size: 16px;
-    box-shadow: 0 4px 15px rgba(0, 119, 255, 0.4);
-    transition: 0.3s;
-  }
-  .vk-btn:hover { background: #005bb5; transform: scale(1.05); }
-
-  /* Подвал */
-  .footer {
-    text-align: center;
-    padding: 30px;
-    color: #888;
-    font-size: 14px;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио — Жанна Шаламова</title>
+    
+    <!-- Подключаем внешний файл со стилями -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="header">
   <h1>💼 Портфолио</h1>
-  <p>Жанна Шаламова — младший воспитатель</p>
+  <p>Жанна Шаламова — Разработчик сайтов и автор детских проектов</p>
 </header>
 
 <main class="container">
@@ -149,33 +20,23 @@
   <a href="index.html" class="back-btn">← На главную</a>
 
   <!-- ГЛАВНЫЙ ПРОЕКТ -->
-  <h2 class="section-title">🌐 Главный проект</h2>
+  <h2 class="section-title">🌟 Главный проект</h2>
+  <div class="cards-grid">
+    <a href="https://zannasalamova389-wq.github.io/yasny-vzglyad-2/" class="card main-project" target="_blank">
+      <div class="card-icon">🔮</div>
+      <h3>Сайт «Ясный взгляд»</h3>
+      <p>Атмосферный сайт-визитка для специалиста. Чистый HTML/CSS, адаптив, уникальный дизайн.</p>
+    </a>
+  </div>
+
+  <!-- ВЕБ-РАЗРАБОТКА И ИГРЫ -->
+  <h2 class="section-title">🌐 Веб-разработка и игры</h2>
   <div class="cards-grid">
     <a href="https://zannasalamova389-wq.github.io/mir-zhanny/" class="card" target="_blank">
-      <div class="card-icon">🌟</div>
+      <div class="card-icon">🌍</div>
       <h3>Сайт «Мир Жанны»</h3>
       <p>Все игры, стихи, рисунки и методички в одном месте</p>
     </a>
-  </div>
-
-  <!-- МОИ КНИГИ -->
-  <h2 class="section-title">📚 Мои книги</h2>
-  <div class="cards-grid">
-    <a href="https://zannasalamova389-wq.github.io/book-zhanny/" class="card" target="_blank">
-      <div class="card-icon">📖</div>
-      <h3>Книга стихов</h3>
-      <p>20 стихов для детей и взрослых</p>
-    </a>
-    <a href="https://zannasalamova389-wq.github.io/book-derevnya/" class="card" target="_blank">
-      <div class="card-icon">🌿</div>
-      <h3>Деревенское детство</h3>
-      <p>Книга воспоминаний (14 глав)</p>
-    </a>
-  </div>
-
-  <!-- МОИ ИГРЫ -->
-  <h2 class="section-title">🎮 Мои игры</h2>
-  <div class="cards-grid">
     <a href="https://zannasalamova389-wq.github.io/coloring-game/" class="card" target="_blank">
       <div class="card-icon">🎨</div>
       <h3>Раскраска</h3>
@@ -198,6 +59,21 @@
     </a>
   </div>
 
+  <!-- МОИ КНИГИ -->
+  <h2 class="section-title">📚 Мои книги</h2>
+  <div class="cards-grid">
+    <a href="https://zannasalamova389-wq.github.io/book-zhanny/" class="card" target="_blank">
+      <div class="card-icon">📖</div>
+      <h3>Книга стихов</h3>
+      <p>20 стихов для детей и взрослых</p>
+    </a>
+    <a href="https://zannasalamova389-wq.github.io/book-derevnya/" class="card" target="_blank">
+      <div class="card-icon">🌿</div>
+      <h3>Деревенское детство</h3>
+      <p>Книга воспоминаний (14 глав)</p>
+    </a>
+  </div>
+
   <!-- О СЕБЕ -->
   <h2 class="section-title">👩 О себе</h2>
   <div class="text-block">
@@ -205,19 +81,8 @@
     <p><strong>Образование:</strong> АНО ДО УЦ «Стандарт», 2016 год. Специальность — младший воспитатель.</p>
     <p><strong>Опыт:</strong> работа с детьми (свои дети и няня для чужих детей).</p>
     <p><strong>Миссия:</strong> создавать развивающие и обучающие материалы для детей, чтобы они учились через игру и творчество.</p>
-    <p><strong>Главный принцип:</strong> всё, что вы видите в моих проектах — рисунки, игры, стихи — создано мной лично.</p>
-  </div>
-
-  <!-- НАВЫКИ -->
-  <h2 class="section-title">🛠 Мои навыки</h2>
-  <div class="text-block">
-    <ul>
-      <li>🎨 Рисование (создание иллюстраций для книг и игр).</li>
-      <li>📝 Написание стихов и прозы для детей.</li>
-      <li>💻 Создание сайтов (HTML, CSS, JavaScript).</li>
-      <li>🎮 Разработка детских развивающих игр.</li>
-      <li>📚 Методическая работа (конспекты, планы занятий).</li>
-    </ul>
+    <p><strong>Навыки:</strong> HTML, CSS, JavaScript, создание детских игр, рисование, написание стихов.</p>
+    <p><strong>Главный принцип:</strong> всё, что вы видите в моих проектах — рисунки, игры, стихи и сайты — создано мной лично.</p>
   </div>
 
   <!-- КОНТАКТЫ -->
@@ -234,5 +99,7 @@
   <p>© 2026 Жанна Шаламова. Авторский проект.</p>
 </footer>
 
+<!-- Подключаем внешний файл со скриптом -->
+<script src="script.js"></script>
 </body>
 </html>

@@ -1,53 +1,19 @@
-const projects = [
-  {
-    title: "Coffee Time",
-    description: "Лендинг кофейни",
-    link: "#",
-    image: "coffee.jpg"
-  },
-  {
-    title: "Мясной ресторан",
-    description: "Сайт ресторана",
-    link: "#",
-    image: "restaurant.jpg"
-  },
-  {
-    title: "Портфолио Жанны",
-    description: "Личное портфолио",
-    link: "#",
-    image: "portfolio.jpg"
-  },
-  // 👇 ДОБАВЛЯЕМ ВАШУ ГАЛЕРЕЮ
-  {
-    title: "Галерея рисунков",
-    description: "Интерактивная галерея из 31 рисунка",
-    link: "https://ваш-логин.github.io/art-gallery-simple/", // Ссылка на GitHub Pages
-    image: "gallery-preview.jpg" // Превью
-  }
-];const projects = [
-  {
-    title: "Coffee Time",
-    description: "Лендинг кофейни",
-    link: "#",
-    image: "coffee.jpg"
-  },
-  {
-    title: "Мясной ресторан",
-    description: "Сайт ресторана",
-    link: "#",
-    image: "restaurant.jpg"
-  },
-  {
-    title: "Портфолио Жанны",
-    description: "Личное портфолио",
-    link: "#",
-    image: "portfolio.jpg"
-  },
-  // 👇 ДОБАВЛЯЕМ ВАШУ ГАЛЕРЕЮ
-  {
-    title: "Галерея рисунков",
-    description: "Интерактивная галерея из 31 рисунка",
-    link: "https://ваш-логин.github.io/art-gallery-simple/", // Ссылка на GitHub Pages
-    image: "gallery-preview.jpg" // Превью
-  }
-];
+// Ждем загрузки страницы
+document.addEventListener('DOMContentLoaded', () => {
+    
+    // Находим все карточки
+    const cards = document.querySelectorAll('.card');
+    
+    // Сначала делаем их прозрачными
+    cards.forEach((card, index) => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        
+        // Плавно показываем каждую карточку с небольшой задержкой
+        setTimeout(() => {
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+        }, index * 100); // 100мс задержка между карточками
+    });
+});
